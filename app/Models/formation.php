@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 class formation extends Model
 {
     use HasFactory;
+    
+     protected $table = 'formation';
 
     protected $fillable = [
         'nom',
@@ -14,6 +16,3 @@ class formation extends Model
     ];
 }
 
-{
-    return $this->hasMany(Inscription::class);
-}

@@ -27,9 +27,11 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::delete('/formation/{id}', [App\Http\Controllers\FormationController::class, 'destroy']);
 
 
-    // inscription
-    Route::get('/inscription', [App\Http\Controllers\InscriptionController::class, 'index']);
-    Route::post('/inscription', [App\Http\Controllers\InscriptionController::class, 'store']);
-    Route::get('/inscription/{id}', [App\Http\Controllers\InscriptionController::class, 'show']);
-    Route::put('/inscription/{id}', [App\Http\Controllers\InscriptionController::class, 'update']);
-    Route::delete('/inscription/{id}', [App\Http\Controllers\InscriptionController::class, 'destroy']);
+
+
+//   Paiement
+Route::get('/paiement', [App\Http\Controllers\PaiementController::class, 'index']);
+Route::post('/paiement', [App\Http\Controllers\PaiementController::class, 'store']);
+Route::get('/paiement/{id}', [App\Http\Controllers\PaiementController::class, 'show']);
+Route::put('/paiement/{id}', [App\Http\Controllers\PaiementController::class, 'update']);
+Route::delete('/paiement/{id}', [App\Http\Controllers\PaiementController::class, 'destroy']);
